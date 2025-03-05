@@ -46,3 +46,9 @@ img {
     text-transform: capitalize;
   }
 }
+
+@media (max-width: 350px) {
+  .subtitulo {
+    font-size: 2.5rem;
+  }
+}
