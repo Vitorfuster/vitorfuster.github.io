@@ -1,0 +1,109 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.introducao h1 {
+  position: relative;
+  font-size: 4rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+}
+
+.img1 {
+  display: none;
+}
+
+.introducao h1::before {
+  content: "";
+  width: 180px;
+  height: 130px;
+  display: block;
+  background-image: url("../img/detalhe.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -33px;
+  left: -70px;
+  z-index: -1;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+.introducao p::after {
+  content: "";
+  margin-left: 8px;
+  width: 32px;
+  height: 21px;
+  display: inline-block;
+  background-image: url("../img/Espanha.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1050px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+  .introducao h1::before {
+    width: 135px;
+    height: 95px;
+    top: -28px;
+    left: -50px;
+  }
+
+  @media (max-width: 850px) {
+    .introducao {
+      grid-template-columns: 0.6fr 1fr;
+      gap: 40px;
+    }
+
+    .introducao h1 {
+      font-size: 2rem;
+    }
+
+    .introducao p {
+      font-size: 1.3rem;
+    }
+
+    .introducao h1::before {
+      width: 90px;
+      height: 65px;
+      top: -18px;
+      left: -35px;
+    }
+
+    .introducao p::after {
+      content: "";
+      margin-left: 8px;
+      width: 28px;
+      height: 19px;
+    }
+
+    @media (max-width: 550px) {
+      .introducao {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+        padding-top: 0px;
+      }
+
+      .img2 {
+        display: none;
+      }
+
+      .img1 {
+        display: block;
+        height: 180px;
+      }
+    }
+  }
+}
